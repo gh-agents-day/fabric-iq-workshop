@@ -2,7 +2,6 @@
 
 [![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-IQ%20Ontology-blue?logo=microsoft)](https://fabric.microsoft.com)
 [![Microsoft Foundry](https://img.shields.io/badge/Microsoft%20Foundry-AI%20Agent-purple?logo=azure)](https://ai.azure.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Preview Feature](https://img.shields.io/badge/Status-Preview%20Feature-orange)](#important-preview--trial-limitations)
 
 Welcome to the **Build an AI Agent with Microsoft Fabric IQ, Ontology, and Microsoft Foundry** hands-on workshop repository!
