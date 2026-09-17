@@ -121,7 +121,7 @@ What is the prescription dosage for PatientId 9999?
 
 ---
 
-## 🎉 Workshop Completion
+## Workshop Completion
 
 Congratulations! You have successfully completed the **Build an AI Agent with Microsoft Fabric IQ, Ontology, and Microsoft Foundry** workshop.
 

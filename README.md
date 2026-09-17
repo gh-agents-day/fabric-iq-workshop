@@ -1,16 +1,12 @@
 # Build an AI Agent with Microsoft Fabric IQ, Ontology, and Microsoft Foundry
 
-[![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-IQ%20Ontology-blue?logo=microsoft)](https://fabric.microsoft.com)
-[![Microsoft Foundry](https://img.shields.io/badge/Microsoft%20Foundry-AI%20Agent-purple?logo=azure)](https://ai.azure.com)
-[![Preview Feature](https://img.shields.io/badge/Status-Preview%20Feature-orange)](#important-preview--trial-limitations)
-
 Welcome to the **Build an AI Agent with Microsoft Fabric IQ, Ontology, and Microsoft Foundry** hands-on workshop repository!
 
 This workshop guides data engineers, AI developers, and solution architects through building an end-to-end intelligent agentic workflow for a fictional healthcare provider called **Lamna Healthcare**. You will transform raw tabular healthcare datasets into a rich, graph-based domain ontology in **Microsoft Fabric IQ**, connect that ontology to a **Microsoft Foundry IQ Knowledge Base**, and deploy a grounded **Microsoft Foundry AI Agent** capable of answering complex domain questions.
 
 ---
 
-## 📌 Workshop Overview
+## Workshop Overview
 
 Modern healthcare organizations store operational data across multiple structured tables (patients, rooms, departments, equipment). Querying across these disparate sources traditionally requires complex SQL joins or custom graph schemas.
 
@@ -32,7 +28,7 @@ Healthcare Data (CSVs)
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 By completing this workshop, participants will be able to:
 - **Configure Fabric Capacity & Tenant Settings** required for Fabric IQ Ontology and Graph experiences.
@@ -45,7 +41,7 @@ By completing this workshop, participants will be able to:
 
 ---
 
-## 🏗️ Architecture & Data Flow
+## Architecture & Data Flow
 
 Below is the end-to-end system architecture for the Lamna Healthcare solution:
 
@@ -75,7 +71,7 @@ For complete architectural diagrams and entity-relationship specifications, see 
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Microsoft Fabric**: Lakehouse, Delta Tables, Fabric IQ Ontology (Preview), Query Builder.
 - **Microsoft Foundry (Azure AI Foundry)**: Foundry IQ Knowledge Source, Knowledge Base, Agent Service.
@@ -84,7 +80,7 @@ For complete architectural diagrams and entity-relationship specifications, see 
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before starting the exercises, verify that your environment satisfies all setup requirements outlined in [`prerequisites.md`](prerequisites.md):
 
@@ -97,7 +93,7 @@ Before starting the exercises, verify that your environment satisfies all setup 
 
 ---
 
-## ⚠️ Important Preview & Trial Limitations
+## Important Preview & Trial Limitations
 
 > [!WARNING]
 > **1. Feature Preview Status:**
@@ -111,7 +107,7 @@ Before starting the exercises, verify that your environment satisfies all setup 
 
 ---
 
-## 📚 Workshop Modules & Exercises
+## Workshop Modules & Exercises
 
 The workshop consists of 14 step-by-step hands-on exercises:
 
@@ -134,7 +130,7 @@ The workshop consists of 14 step-by-step hands-on exercises:
 
 ---
 
-## 🏁 Expected Final Outcome
+## Expected Final Outcome
 
 Upon completing Exercise 13, you will have a fully functioning **LamnaHealthcareAgent** running in Microsoft Foundry that can respond accurately to clinical data questions grounded directly in your Fabric IQ Ontology:
 
@@ -147,9 +143,3 @@ Based on the Lamna Healthcare Fabric IQ Ontology:
 - Room Assigned: Room 1 (RoomNumber: ICU-301, Department: Intensive Care Unit, Floor 3)
 - Monitoring Equipment: Continuous Monitoring (EquipmentId: VS-1001, Monitoring Started: 2026-02-01)
 ```
-
----
-
-## 📄 Repository License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
