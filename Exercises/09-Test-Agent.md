@@ -15,7 +15,7 @@ Interact with `LamnaHealthcareAgent` in the Microsoft Foundry playground using n
 ### Step 1: Open Agent Playground
 1. In Microsoft Foundry, select **Build > Agents > LamnaHealthcareAgent**.
 2. Select **Try in playground** (or open the Chat pane).
-3. Confirm that the active model is `gpt-4o` and `Fabric IQ (LamnaHealthcareOntology)` tool is active.
+3. Confirm that the active model deployment is `gpt-4o` (or `gpt-4o-mini`) and `Fabric IQ (LamnaHealthcareOntology)` tool is active.
 
 ---
 
