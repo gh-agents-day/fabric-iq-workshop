@@ -59,7 +59,7 @@ Create a Microsoft Fabric Lakehouse named `LamnaHealthcareLH`, upload the health
 
 Verify you have five tables in the **Tables** section: `hospitals`, `departments`, `rooms`, `patients`, and `vitalsignequipment` as shown in the image below:
 
-![Lakehouse Tables Complete](../Images/02-create-lakehouse.png)
+![Lakehouse Tables Complete](../Images/23-lakehouse-tables-complete.png)
 
 ---
 

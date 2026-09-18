@@ -30,7 +30,7 @@ Create an Eventhouse named `LamnaHealthcareEH` and ingest real-time vital sign m
 
 Verify that the `VitalSignsReadings` table appears in your KQL database as shown in the image below:
 
-![VitalSignsReadings Table Ingested in KQL Database](../Images/timesseries.png)
+![VitalSignsReadings Table Ingested in KQL Database](../Images/23-eventhouse-vitalsigns-table.png)
 
 ---
 

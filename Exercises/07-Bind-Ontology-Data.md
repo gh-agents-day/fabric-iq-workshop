@@ -55,6 +55,8 @@ Follow the same process for static bindings:
    - `RespiratoryRate` → `RespiratoryRate`
 6. Select **Save**.
 
+![Time-Series Vital Signs Data Binding Configuration](../Images/timesseries.png)
+
 ---
 
 ### Step 3: Configure Relationship Key Mappings
