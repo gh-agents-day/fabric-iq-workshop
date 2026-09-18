@@ -40,7 +40,7 @@ Follow the same process to create these four additional relationships:
 
 Verify that your ontology canvas displays all entity nodes and connecting relationship lines as shown in the image below:
 
-![Ontology Canvas Relationship Graph](../Images/relationship-graph.png)
+![Ontology Canvas Relationship Graph](../Images/Ontology%20canvas.png)
 
 ---
 

@@ -22,6 +22,8 @@ Validate `LamnaHealthcareOntology` schemas, inspect graph connections via the Re
    - **Property charts**: Value distributions for entity properties.
    - **Entity instances table**: List of individual records.
 
+![Entity Type Overview and Relationship Graph](../Images/relationship-graph.png)
+
 ### Step 2: Test Entity Graph Traversal
 1. Select instance `PatientId 1001` (`Kerry Allen`).
 2. Observe the interactive **Relationship Graph** view for Patient 1001:
