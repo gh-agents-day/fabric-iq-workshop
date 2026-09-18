@@ -102,7 +102,7 @@ Before starting the exercises, verify that your environment satisfies all setup 
 
 ## Workshop Modules & Exercises
 
-The workshop consists of 14 step-by-step hands-on exercises:
+The workshop consists of 13 step-by-step hands-on exercises:
 
 | Exercise | Description | Focus Area |
 | :--- | :--- | :--- |
@@ -110,22 +110,21 @@ The workshop consists of 14 step-by-step hands-on exercises:
 | [**01-Create-Fabric-Workspace**](Exercises/01-Create-Fabric-Workspace.md) | Create a dedicated Fabric Workspace (`LamnaHealthcareWS`). | Infrastructure Setup |
 | [**02-Create-Lakehouse**](Exercises/02-Create-Lakehouse.md) | Provision `LamnaHealthcareLH` lakehouse, upload CSVs, and load Delta tables. | Data Lakehouse |
 | [**03-Load-Healthcare-Data**](Exercises/03-Load-Healthcare-Data.md) | Provision `LamnaHealthcareEH` eventhouse and ingest time-series data. | Streaming Data Ingestion |
-| [**04-Create-Ontology**](Exercises/04-Create-Ontology.md) | Provision `LamnaHealthcareOntology` preview item. | Semantic Modeling |
-| [**05-Configure-Entities**](Exercises/05-Configure-Entities.md) | Define `Hospital`, `Department`, `Room`, `Patient`, and `VitalSignEquipment` entities. | Entity Modeling |
-| [**06-Configure-Relationships**](Exercises/06-Configure-Relationships.md) | Define graph relationships (`contains`, `has`, `assignedTo`, `monitors`, `locatedIn`). | Graph Modeling |
-| [**07-Bind-Ontology-Data**](Exercises/07-Bind-Ontology-Data.md) | Bind entity types and properties to Lakehouse and Eventhouse tables. | Data Binding |
-| [**08-Test-Ontology**](Exercises/08-Test-Ontology.md) | Preview ontology overview, relationship graph, and run Query Builder tests. | Ontology Validation |
-| [**09-Create-Foundry-Project**](Exercises/09-Create-Foundry-Project.md) | Set up a Microsoft Foundry AI project and deploy LLM models. | AI Infrastructure |
-| [**10-Create-Foundry-IQ-Knowledge-Base**](Exercises/10-Create-Foundry-IQ-Knowledge-Base.md) | Create `LamnaHealthcareKnowledge` in Microsoft Foundry. | Knowledge Base |
-| [**11-Connect-Ontology-to-Foundry**](Exercises/11-Connect-Ontology-to-Foundry.md) | Establish a Knowledge Source connection between Fabric IQ and Foundry IQ. | Fabric-Foundry Integration |
-| [**12-Create-AI-Agent**](Exercises/12-Create-AI-Agent.md) | Configure `LamnaHealthcareAgent` with custom grounding instructions. | Agent Engineering |
-| [**13-Test-Agent**](Exercises/13-Test-Agent.md) | Run test query scenarios against `PatientId 1001` to evaluate agent performance. | Agent Testing & Validation |
+| [**04-Create-Ontology**](Exercises/04-Create-Ontology.md) | Provision `LamnaHealthcareOntology` and configure domain entity types and keys. | Semantic & Entity Modeling |
+| [**05-Configure-Relationships**](Exercises/05-Configure-Relationships.md) | Define graph relationships (`contains`, `has`, `assignedTo`, `monitors`, `locatedIn`). | Graph Modeling |
+| [**06-Bind-Ontology-Data**](Exercises/06-Bind-Ontology-Data.md) | Bind entity types and properties to Lakehouse and Eventhouse tables. | Data Binding |
+| [**07-Test-Ontology**](Exercises/07-Test-Ontology.md) | Preview ontology overview, relationship graph, and run Query Builder tests. | Ontology Validation |
+| [**08-Create-Foundry-Project**](Exercises/08-Create-Foundry-Project.md) | Set up a Microsoft Foundry AI project and deploy LLM models. | AI Infrastructure |
+| [**09-Create-Foundry-IQ-Knowledge-Base**](Exercises/09-Create-Foundry-IQ-Knowledge-Base.md) | Create `LamnaHealthcareKnowledge` in Microsoft Foundry. | Knowledge Base |
+| [**10-Connect-Ontology-to-Foundry**](Exercises/10-Connect-Ontology-to-Foundry.md) | Establish a Knowledge Source connection between Fabric IQ and Foundry IQ. | Fabric-Foundry Integration |
+| [**11-Create-AI-Agent**](Exercises/11-Create-AI-Agent.md) | Configure `LamnaHealthcareAgent` with custom grounding instructions. | Agent Engineering |
+| [**12-Test-Agent**](Exercises/12-Test-Agent.md) | Run test query scenarios against `PatientId 1001` to evaluate agent performance. | Agent Testing & Validation |
 
 ---
 
 ## Expected Final Outcome
 
-Upon completing Exercise 13, you will have a fully functioning **LamnaHealthcareAgent** running in Microsoft Foundry that can respond accurately to clinical data questions grounded directly in your Fabric IQ Ontology:
+Upon completing Exercise 12, you will have a fully functioning **LamnaHealthcareAgent** running in Microsoft Foundry that can respond accurately to clinical data questions grounded directly in your Fabric IQ Ontology:
 
 ```text
 User: Show the room and monitoring equipment associated with PatientId 1001.

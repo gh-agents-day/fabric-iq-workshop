@@ -1,6 +1,6 @@
-# Exercise 09: Create Foundry Project
+# Exercise 08: Create Foundry Project
 
-[← Previous Exercise: Test Ontology](08-Test-Ontology.md) | [Home](../README.md) | [Next Exercise: Create Foundry IQ Knowledge Base →](10-Create-Foundry-IQ-Knowledge-Base.md)
+[← Previous Exercise: Preview the Ontology & Query Builder](07-Test-Ontology.md) | [Home](../README.md) | [Next Exercise: Create Foundry IQ Knowledge Base →](09-Create-Foundry-IQ-Knowledge-Base.md)
 
 ---
 
@@ -54,4 +54,4 @@ Provision a Microsoft Foundry (Azure AI Foundry) project named `LamnaHealthcareF
 
 ## Next Exercise
 
-Proceed to [Exercise 10: Create Foundry IQ Knowledge Base](10-Create-Foundry-IQ-Knowledge-Base.md).
+Proceed to [Exercise 09: Create Foundry IQ Knowledge Base](09-Create-Foundry-IQ-Knowledge-Base.md).

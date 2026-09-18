@@ -1,6 +1,6 @@
-# Exercise 12: Create AI Agent
+# Exercise 11: Create AI Agent
 
-[← Previous Exercise: Connect Ontology to Foundry](11-Connect-Ontology-to-Foundry.md) | [Home](../README.md) | [Next Exercise: Test Agent →](13-Test-Agent.md)
+[← Previous Exercise: Connect Ontology to Foundry](10-Connect-Ontology-to-Foundry.md) | [Home](../README.md) | [Next Exercise: Test Agent →](12-Test-Agent.md)
 
 ---
 
@@ -55,4 +55,4 @@ Do not invent healthcare data. If information cannot be retrieved from the ontol
 
 ## Next Exercise
 
-Proceed to [Exercise 13: Test Agent](13-Test-Agent.md).
+Proceed to [Exercise 12: Test Agent](12-Test-Agent.md).

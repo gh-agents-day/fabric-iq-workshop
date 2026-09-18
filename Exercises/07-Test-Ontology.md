@@ -1,6 +1,6 @@
-# Exercise 08: Test Ontology
+# Exercise 07: Preview the Ontology & Query Builder
 
-[← Previous Exercise: Bind Ontology Data](07-Bind-Ontology-Data.md) | [Home](../README.md) | [Next Exercise: Create Foundry Project →](09-Create-Foundry-Project.md)
+[← Previous Exercise: Bind Entity Types to Data](06-Bind-Ontology-Data.md) | [Home](../README.md) | [Next Exercise: Create Foundry Project →](08-Create-Foundry-Project.md)
 
 ---
 
@@ -65,4 +65,4 @@ Review the Query Builder output table for `PatientId 1001`:
 
 ## Next Exercise
 
-Proceed to [Exercise 09: Create Foundry Project](09-Create-Foundry-Project.md).
+Proceed to [Exercise 08: Create Foundry Project](08-Create-Foundry-Project.md).

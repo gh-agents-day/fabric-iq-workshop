@@ -1,6 +1,6 @@
-# Exercise 07: Bind Entity Types to Data & Configure Relationships
+# Exercise 06: Bind Entity Types to Data & Configure Relationships
 
-[← Previous Exercise: Create Relationship Types](06-Configure-Relationships.md) | [Home](../README.md) | [Next Exercise: Preview the Ontology →](08-Test-Ontology.md)
+[← Previous Exercise: Create Relationship Types](05-Configure-Relationships.md) | [Home](../README.md) | [Next Exercise: Preview the Ontology →](07-Test-Ontology.md)
 
 ---
 
@@ -92,4 +92,4 @@ All entities and relationships in `LamnaHealthcareOntology` are bound to physica
 
 ## Next Exercise
 
-Proceed to [Exercise 08: Preview the Ontology](08-Test-Ontology.md).
+Proceed to [Exercise 07: Preview the Ontology](07-Test-Ontology.md).

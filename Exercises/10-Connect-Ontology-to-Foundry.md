@@ -1,6 +1,6 @@
-# Exercise 11: Connect Ontology to Foundry
+# Exercise 10: Connect Ontology to Foundry
 
-[← Previous Exercise: Create Foundry IQ Knowledge Base](10-Create-Foundry-IQ-Knowledge-Base.md) | [Home](../README.md) | [Next Exercise: Create AI Agent →](12-Create-AI-Agent.md)
+[← Previous Exercise: Create Foundry IQ Knowledge Base](09-Create-Foundry-IQ-Knowledge-Base.md) | [Home](../README.md) | [Next Exercise: Create AI Agent →](11-Create-AI-Agent.md)
 
 ---
 
@@ -55,4 +55,4 @@ Establish a live Knowledge Source connection between `LamnaHealthcareOntology` i
 
 ## Next Exercise
 
-Proceed to [Exercise 12: Create AI Agent](12-Create-AI-Agent.md).
+Proceed to [Exercise 11: Create AI Agent](11-Create-AI-Agent.md).

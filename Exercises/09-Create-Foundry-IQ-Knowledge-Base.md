@@ -1,6 +1,6 @@
-# Exercise 10: Create Foundry IQ Knowledge Base
+# Exercise 09: Create Foundry IQ Knowledge Base
 
-[← Previous Exercise: Create Foundry Project](09-Create-Foundry-Project.md) | [Home](../README.md) | [Next Exercise: Connect Ontology to Foundry →](11-Connect-Ontology-to-Foundry.md)
+[← Previous Exercise: Create Foundry Project](08-Create-Foundry-Project.md) | [Home](../README.md) | [Next Exercise: Connect Ontology to Foundry →](10-Connect-Ontology-to-Foundry.md)
 
 ---
 
@@ -48,4 +48,4 @@ The `LamnaHealthcareKnowledge` Knowledge Base is provisioned in Microsoft Foundr
 
 ## Next Exercise
 
-Proceed to [Exercise 11: Connect Ontology to Foundry](11-Connect-Ontology-to-Foundry.md).
+Proceed to [Exercise 10: Connect Ontology to Foundry](10-Connect-Ontology-to-Foundry.md).

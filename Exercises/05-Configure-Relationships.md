@@ -1,6 +1,6 @@
-# Exercise 06: Create Relationship Types
+# Exercise 05: Create Relationship Types
 
-[← Previous Exercise: Configure Entities](05-Configure-Entities.md) | [Home](../README.md) | [Next Exercise: Bind Entity Types to Data →](07-Bind-Ontology-Data.md)
+[← Previous Exercise: Create Ontology and Entity Types](04-Create-Ontology.md) | [Home](../README.md) | [Next Exercise: Bind Entity Types to Data →](06-Bind-Ontology-Data.md)
 
 ---
 
@@ -52,4 +52,4 @@ The ontology structure is complete with 5 entity types connected by 5 semantic r
 
 ## Next Exercise
 
-Proceed to [Exercise 07: Bind Entity Types to Data](07-Bind-Ontology-Data.md).
+Proceed to [Exercise 06: Bind Entity Types to Data](06-Bind-Ontology-Data.md).

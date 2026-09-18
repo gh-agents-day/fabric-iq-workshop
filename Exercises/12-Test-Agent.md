@@ -1,6 +1,6 @@
-# Exercise 13: Test Agent
+# Exercise 12: Test Agent
 
-[← Previous Exercise: Create AI Agent](12-Create-AI-Agent.md) | [Home](../README.md)
+[← Previous Exercise: Create AI Agent](11-Create-AI-Agent.md) | [Home](../README.md)
 
 ---
 
