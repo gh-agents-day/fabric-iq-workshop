@@ -25,7 +25,7 @@ Provision a project in Microsoft Foundry, create an AI Agent named `LamnaHealthc
 2. Select **+ Create agent**.
 3. Configure agent settings:
    - **Agent Name**: `LamnaHealthcareAgent`
-   - **Model Deployment**: Select `gpt-4o` (or `gpt-4o-mini`).
+   - **Model Deployment**: Select `gpt-5` (or `gpt-5-mini`).
 4. In the **Instructions** text box, enter the system prompt:
 
 ```text
