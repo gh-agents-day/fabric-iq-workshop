@@ -114,6 +114,11 @@ Now you’ll configure each relationship type by specifying which table links th
      - **Matched Hospital**: Select `HospitalId` (matches the `HospitalId` key defined on the `Hospital` entity).
    - Under **Target entity type**: Confirm `Department` is selected.
      - **Matched Department**: Select `DepartmentId` (matches the `DepartmentId` key defined on the `Department` entity).
+
+Your `contains` relationship configuration should look like this:
+
+![Contains Relationship Configuration](../Images/relationship-contains-config.png)
+
 3. Select **Save**, confirm that the relationship type updated successfully, then select **Cancel** to close the configuration options.
 4. Select **Home** to return to the ontology canvas.
 

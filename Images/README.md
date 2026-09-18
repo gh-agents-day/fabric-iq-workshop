@@ -9,5 +9,6 @@ This directory stores screenshot assets embedded throughout the workshop exercis
 - **`Ontology canvas.png`**: Fabric IQ Ontology Canvas layout (`LamnaHealthcareOntology`).
 - **`05-entity-hospital.png`**: Entity type configuration view (`Hospital` properties and key).
 - **`relationship-contains.png`**: Relationship type configuration dialog (`contains`).
+- **`relationship-contains-config.png`**: Relationship configuration pane with origin/target entity key mappings (`contains`).
 - **`relationship-graph.png`**: Visual graph editor showing interconnected entity nodes.
 - **`timesseries.png`**: Fabric IQ Ontology time-series data binding configuration view.
