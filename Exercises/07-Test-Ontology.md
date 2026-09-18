@@ -1,6 +1,6 @@
 # Exercise 07: Preview the Ontology & Query Builder
 
-[← Previous Exercise: Bind Entity Types to Data](06-Bind-Ontology-Data.md) | [Home](../README.md) | [Next Exercise: Create Foundry Project →](08-Create-Foundry-Project.md)
+[← Previous Exercise: Bind Entity Types to Data](06-Bind-Ontology-Data.md) | [Home](../README.md) | [Next Exercise: Create AI Agent →](08-Create-AI-Agent.md)
 
 ---
 
@@ -169,4 +169,4 @@ Verify that the query correctly resolves the following information:
 
 ## Next Exercise
 
-Proceed to [Exercise 08: Create Foundry Project](08-Create-Foundry-Project.md).
+Proceed to [Exercise 08: Create AI Agent with Fabric IQ Ontology](08-Create-AI-Agent.md).

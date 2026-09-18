@@ -2,7 +2,7 @@
 
 Welcome to the **Build an AI Agent with Microsoft Fabric IQ, Ontology, and Microsoft Foundry** hands-on workshop repository!
 
-This workshop guides data engineers, AI developers, and solution architects through building an end-to-end intelligent agentic workflow for a fictional healthcare provider called **Lamna Healthcare**. You will transform raw tabular healthcare datasets into a rich, graph-based domain ontology in **Microsoft Fabric IQ**, connect that ontology to a **Microsoft Foundry IQ Knowledge Base**, and deploy a grounded **Microsoft Foundry AI Agent** capable of answering complex domain questions.
+This workshop guides data engineers, AI developers, and solution architects through building an end-to-end intelligent agentic workflow for a fictional healthcare provider called **Lamna Healthcare**. You will transform raw tabular healthcare datasets into a rich, graph-based domain ontology in **Microsoft Fabric IQ**, connect that ontology to a **Microsoft Foundry AI Agent** via the **Fabric IQ (OneLake Catalog)** tool, and interact with a grounded AI Agent capable of answering complex domain questions.
 
 ---
 
@@ -14,16 +14,15 @@ In this workshop, you will:
 1. Load healthcare data into a **Microsoft Fabric Lakehouse**.
 2. Construct a **Fabric IQ Ontology** modeling hospitals, departments, rooms, patients, and vital sign monitoring equipment.
 3. Bind tabular Lakehouse data to domain entities and establish semantic graph relationships.
-4. Ground a **Microsoft Foundry AI Agent** using a **Foundry IQ Knowledge Base** connected to your Fabric IQ Ontology.
+4. Ground a **Microsoft Foundry AI Agent** using the **Fabric IQ (OneLake Catalog)** tool connected to your `LamnaHealthcareOntology`.
 5. Interact with the AI Agent in natural language to query patient context, room assignments, and active monitoring equipment.
 
 ```
 Healthcare Data (CSVs)
-  └─► Microsoft Fabric Lakehouse
+  └─► Microsoft Fabric Lakehouse & Eventhouse
         └─► Fabric IQ Ontology (Entities & Relationships)
-              └─► Fabric IQ Query Builder
-                    └─► Foundry IQ Knowledge Base (LamnaHealthcareKnowledge)
-                          └─► Microsoft Foundry AI Agent (LamnaHealthcareAgent)
+              └─► Fabric IQ Query Builder Validation
+                    └─► Microsoft Foundry AI Agent (Fabric IQ OneLake Tool)
 ```
 
 ---
@@ -36,7 +35,7 @@ By completing this workshop, participants will be able to:
 - **Design Domain Ontologies** in Fabric IQ with custom Entity Types, Entity Keys, and Property Bindings.
 - **Model Graph Relationships** (e.g., `contains`, `has`, `assignedTo`, `monitors`, `locatedIn`).
 - **Validate & Traversal Test** ontologies using the Fabric IQ Relationship Graph and Query Builder.
-- **Integrate Fabric IQ with Microsoft Foundry** by creating a Foundry IQ Knowledge Source and Knowledge Base.
+- **Integrate Fabric IQ with Microsoft Foundry** by attaching your Fabric IQ Ontology item as an Agent Tool via OneLake Catalog.
 - **Construct & Test Grounded AI Agents** in Microsoft Foundry with targeted system instructions and safety constraints.
 
 ---
@@ -56,12 +55,10 @@ flowchart LR
     end
 
     subgraph Foundry["Microsoft Foundry"]
-        FKS["Foundry IQ Knowledge Source"]
-        FKB["Knowledge Base<br/>(LamnaHealthcareKnowledge)"]
+        TOOL["Fabric IQ Tool<br/>(OneLake Catalog)"]
         AGT["Foundry AI Agent<br/>(LamnaHealthcareAgent)"]
-        ONT -->|Connect| FKS
-        FKS --> FKB
-        FKB --> AGT
+        ONT -->|Ground| TOOL
+        TOOL --> AGT
     end
 
     USER[User / Clinician] <-->|Natural Language Queries| AGT
@@ -74,7 +71,7 @@ For complete architectural diagrams and entity-relationship specifications, see 
 ## Technologies Used
 
 - **Microsoft Fabric**: Lakehouse, Delta Tables, Fabric IQ Ontology (Preview), Query Builder.
-- **Microsoft Foundry (Azure AI Foundry)**: Foundry IQ Knowledge Source, Knowledge Base, Agent Service.
+- **Microsoft Foundry (Azure AI Foundry)**: Fabric IQ (OneLake Catalog) Tool, Agent Service, Model Deployments.
 - **Data Formats**: CSV, Delta Lake format.
 - **Modeling**: Knowledge Graphs, Domain Ontologies, Entity-Relationship Mapping.
 
@@ -89,7 +86,7 @@ Before starting the exercises, verify that your environment satisfies all setup 
    - `Enable Ontology item (preview)` set to Enabled.
    - `User can create Graph (preview)` set to Enabled.
 3. **Microsoft Foundry Access**: Azure Subscription with access to Microsoft Foundry (`https://ai.azure.com`).
-4. **Workshop Datasets**: Available in the [`Data/`](file:///c:/Users/Praveenr/Desktop/demo/fabricIQ%20workshop/Data/) directory.
+4. **Workshop Datasets**: Available in the [`Data/`](Data/) directory.
 
 ---
 
@@ -102,7 +99,7 @@ Before starting the exercises, verify that your environment satisfies all setup 
 
 ## Workshop Modules & Exercises
 
-The workshop consists of 13 step-by-step hands-on exercises:
+The workshop consists of 10 step-by-step hands-on exercises:
 
 | Exercise | Description | Focus Area |
 | :--- | :--- | :--- |
@@ -114,17 +111,14 @@ The workshop consists of 13 step-by-step hands-on exercises:
 | [**05-Configure-Relationships**](Exercises/05-Configure-Relationships.md) | Define graph relationships (`contains`, `has`, `assignedTo`, `monitors`, `locatedIn`). | Graph Modeling |
 | [**06-Bind-Ontology-Data**](Exercises/06-Bind-Ontology-Data.md) | Bind entity types and properties to Lakehouse and Eventhouse tables. | Data Binding |
 | [**07-Test-Ontology**](Exercises/07-Test-Ontology.md) | Preview ontology overview, relationship graph, and run Query Builder tests. | Ontology Validation |
-| [**08-Create-Foundry-Project**](Exercises/08-Create-Foundry-Project.md) | Set up a Microsoft Foundry AI project and deploy LLM models. | AI Infrastructure |
-| [**09-Create-Foundry-IQ-Knowledge-Base**](Exercises/09-Create-Foundry-IQ-Knowledge-Base.md) | Create `LamnaHealthcareKnowledge` in Microsoft Foundry. | Knowledge Base |
-| [**10-Connect-Ontology-to-Foundry**](Exercises/10-Connect-Ontology-to-Foundry.md) | Establish a Knowledge Source connection between Fabric IQ and Foundry IQ. | Fabric-Foundry Integration |
-| [**11-Create-AI-Agent**](Exercises/11-Create-AI-Agent.md) | Configure `LamnaHealthcareAgent` with custom grounding instructions. | Agent Engineering |
-| [**12-Test-Agent**](Exercises/12-Test-Agent.md) | Run test query scenarios against `PatientId 1001` to evaluate agent performance. | Agent Testing & Validation |
+| [**08-Create-AI-Agent**](Exercises/08-Create-AI-Agent.md) | Create Foundry Project, AI Agent (`LamnaHealthcareAgent`), and attach Fabric IQ tool. | Agent Engineering |
+| [**09-Test-Agent**](Exercises/09-Test-Agent.md) | Run test query scenarios against `PatientId 1001` to evaluate agent performance. | Agent Testing & Validation |
 
 ---
 
 ## Expected Final Outcome
 
-Upon completing Exercise 12, you will have a fully functioning **LamnaHealthcareAgent** running in Microsoft Foundry that can respond accurately to clinical data questions grounded directly in your Fabric IQ Ontology:
+Upon completing Exercise 09, you will have a fully functioning **LamnaHealthcareAgent** running in Microsoft Foundry that can respond accurately to clinical data questions grounded directly in your Fabric IQ Ontology:
 
 ```text
 User: Show the room and monitoring equipment associated with PatientId 1001.
