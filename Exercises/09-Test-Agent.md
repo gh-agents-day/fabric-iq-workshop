@@ -1,6 +1,6 @@
 # Exercise 09: Test AI Agent
 
-[← Previous Exercise: Create AI Agent with Fabric IQ Ontology](08-Create-AI-Agent.md) | [Home](../README.md)
+[← Previous Exercise: Create AI Agent with Fabric IQ Ontology](08-Create-AI-Agent.md) | [Home](../README.md) | [Next Exercise: Clean Up Resources →](10-Clean-Up-Resources.md)
 
 ---
 
@@ -76,14 +76,6 @@ What is the prescription dosage for PatientId 9999?
 
 ---
 
-## Workshop Completion
+## Next Exercise
 
-Congratulations! You have successfully completed the **Build an AI Agent with Microsoft Fabric IQ, Ontology, and Microsoft Foundry** workshop.
-
-### Key Achievements:
-- Created a Healthcare Lakehouse & Eventhouse in Microsoft Fabric.
-- Modeled domain entities and graph relationships in Fabric IQ Ontology.
-- Validated graph traversals via Fabric IQ Query Builder.
-- Grounded an AI Agent in Microsoft Foundry using Fabric IQ OneLake Catalog integration.
-
-[Return to Main Workshop README](../README.md)
+Proceed to [Exercise 10: Clean Up Resources (Optional)](10-Clean-Up-Resources.md).

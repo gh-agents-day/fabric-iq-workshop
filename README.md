@@ -99,7 +99,7 @@ Before starting the exercises, verify that your environment satisfies all setup 
 
 ## Workshop Modules & Exercises
 
-The workshop consists of 10 step-by-step hands-on exercises:
+The workshop consists of 11 step-by-step hands-on exercises:
 
 | Exercise | Description | Focus Area |
 | :--- | :--- | :--- |
@@ -113,6 +113,7 @@ The workshop consists of 10 step-by-step hands-on exercises:
 | [**07-Test-Ontology**](Exercises/07-Test-Ontology.md) | Preview ontology overview, relationship graph, and run Query Builder tests. | Ontology Validation |
 | [**08-Create-AI-Agent**](Exercises/08-Create-AI-Agent.md) | Create Foundry Project, AI Agent (`LamnaHealthcareAgent`), and attach Fabric IQ tool. | Agent Engineering |
 | [**09-Test-Agent**](Exercises/09-Test-Agent.md) | Run test query scenarios against `PatientId 1001` to evaluate agent performance. | Agent Testing & Validation |
+| [**10-Clean-Up-Resources**](Exercises/10-Clean-Up-Resources.md) | Clean up Fabric workspace and Microsoft Foundry project resources (optional). | Resource Clean Up |
 
 ---
 
