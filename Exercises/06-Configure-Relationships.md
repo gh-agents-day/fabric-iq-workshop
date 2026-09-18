@@ -13,73 +13,28 @@ Model graph relationships between domain entities in `LamnaHealthcareOntology` t
 ## Steps
 
 ### Step 1: Create `contains` Relationship (Hospital → Department)
-1. In the Ontology ribbon, click **Add relationship**.
+1. In the ribbon, select **Add relationship**.
 2. Configure the relationship dialog:
+   - **Relationship type name**: `contains`
+   - **Origin entity type**: `Hospital`
+   - **Target entity type**: `Department`
+3. Select **Create**. The `contains` relationship line connects `Hospital` to `Department`.
 
-| Setting | Value |
-| :--- | :--- |
-| **Relationship type name** | `contains` |
-| **Origin entity type** | `Hospital` |
-| **Target entity type** | `Department` |
+### Step 2: Create Remaining Relationships
+Follow the same process to create these four additional relationships:
 
-3. Click **Create**. A connecting arrow labeled `contains` appears on the canvas.
-
-> [!NOTE]
-> Add screenshot: Images/06-relationship-contains.png
-
-### Step 2: Create `has` Relationship (Department → Room)
-1. Click **Add relationship** in the ribbon.
-2. Configure settings:
-
-| Setting | Value |
-| :--- | :--- |
-| **Relationship type name** | `has` |
-| **Origin entity type** | `Department` |
-| **Target entity type** | `Room` |
-
-3. Click **Create**.
-
-### Step 3: Create `assignedTo` Relationship (Patient → Room)
-1. Click **Add relationship** in the ribbon.
-2. Configure settings:
-
-| Setting | Value |
-| :--- | :--- |
-| **Relationship type name** | `assignedTo` |
-| **Origin entity type** | `Patient` |
-| **Target entity type** | `Room` |
-
-3. Click **Create**.
-
-### Step 4: Create `monitors` Relationship (VitalSignEquipment → Patient)
-1. Click **Add relationship** in the ribbon.
-2. Configure settings:
-
-| Setting | Value |
-| :--- | :--- |
-| **Relationship type name** | `monitors` |
-| **Origin entity type** | `VitalSignEquipment` |
-| **Target entity type** | `Patient` |
-
-3. Click **Create**.
-
-### Step 5: Create `locatedIn` Relationship (VitalSignEquipment → Room)
-1. Click **Add relationship** in the ribbon.
-2. Configure settings:
-
-| Setting | Value |
-| :--- | :--- |
-| **Relationship type name** | `locatedIn` |
-| **Origin entity type** | `VitalSignEquipment` |
-| **Target entity type** | `Room` |
-
-3. Click **Create**.
+| Relationship Name | Origin Entity Type | Target Entity Type | Description |
+| :--- | :--- | :--- | :--- |
+| `has` | `Department` | `Room` | Department contains rooms |
+| `assignedTo` | `Patient` | `Room` | Patient is assigned to a room |
+| `monitors` | `VitalSignEquipment` | `Patient` | Equipment monitors patient |
+| `locatedIn` | `VitalSignEquipment` | `Room` | Equipment is located in a room |
 
 ---
 
 ## Validation
 
-Review the Ontology Canvas relationship graph. Verify that all 5 relationships are visually rendered:
+Review the Ontology Canvas relationship graph. Verify that all 5 relationships are visually rendered connecting the entities:
 
 ```text
 [Hospital] ───(contains)───► [Department] ───(has)───► [Room]
@@ -93,14 +48,11 @@ Review the Ontology Canvas relationship graph. Verify that all 5 relationships a
                                                                    └───(locatedIn)
 ```
 
-> [!NOTE]
-> Add screenshot: Images/06-relationship-graph.png
-
 ---
 
 ## Expected Result
 
-The 5 semantic relationships are created, linking entity types into an interconnected domain graph.
+The 5 semantic relationships are created, connecting entity types into an interconnected domain graph.
 
 ---
 

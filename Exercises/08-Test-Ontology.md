@@ -12,28 +12,24 @@ Validate `LamnaHealthcareOntology` schemas, inspect graph connections via the Re
 
 ## Steps
 
-### Step 1: Save and Validate Ontology Schema
-1. In the `LamnaHealthcareOntology` top ribbon, click **Save**.
-2. Click **Validate** to trigger schema integrity checks.
-3. Verify that zero compilation warnings or unmapped property errors are returned.
+### Step 1: Save and Preview Ontology
+1. In the `LamnaHealthcareOntology` ribbon, select **Save**.
+2. Select **Room** (or **Patient**) from the Entity Types list.
+3. In the ontology ribbon, select **Entity type overview**.
+4. After background processing completes, refresh the browser page to display the entity overview.
+5. Review the overview sections:
+   - **Relationship graph**: Visual representation connecting `Patient`, `Room`, `Department`, and `VitalSignEquipment`.
+   - **Property charts**: Value distributions for entity properties.
+   - **Entity instances table**: List of individual records.
 
-> [!NOTE]
-> Add screenshot: Images/08-validate-ontology.png
-
-### Step 2: Test Entity Graph Traversal (Relationship Graph)
-1. Select the `Patient` entity node on the canvas.
-2. Click **Entity type overview** (or **Preview data**).
-3. Wait 1-2 minutes for background indexing to complete if prompted.
-4. Select instance `PatientId 1001` (`Kerry Allen`).
-5. Observe the interactive **Relationship Graph** view for Patient 1001:
+### Step 2: Test Entity Graph Traversal
+1. Select instance `PatientId 1001` (`Kerry Allen`).
+2. Observe the interactive **Relationship Graph** view for Patient 1001:
    - Traverses to `Room 1` (`ICU-301`) via `assignedTo`.
    - Traverses to `VitalSignEquipment VS-1001` via `monitors`.
 
-> [!NOTE]
-> Add screenshot: Images/08-relationship-graph-1001.png
-
 ### Step 3: Run Traversal Queries in Query Builder
-1. Click **Query Builder** in the top ribbon.
+1. Select **Query Builder** in the ribbon.
 2. Construct a graph traversal query for `PatientId 1001`:
 
 ```text
@@ -43,10 +39,7 @@ FIND Patient WHERE PatientId = 1001
   MATCH (Department)-[has]->(Room)
 ```
 
-3. Click **Run Query**.
-
-> [!NOTE]
-> Add screenshot: Images/08-query-builder-patient1001.png
+3. Select **Run Query**.
 
 ---
 

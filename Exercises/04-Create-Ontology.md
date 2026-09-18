@@ -12,42 +12,24 @@ Create an empty **Fabric IQ Ontology** item named `LamnaHealthcareOntology` with
 
 ## Steps
 
-### Step 1: Provision Ontology Preview Item
-1. Return to the `LamnaHealthcareWS` workspace view in Microsoft Fabric.
-2. In the top toolbar, click **+ New item**.
-3. In the new item selection modal, locate the **Fabric IQ** section and select **Ontology (preview)**.
+### Step 1: Provision Ontology Item
+1. In your `LamnaHealthcareWS` workspace, select **+ New item**.
+2. Select **Ontology (preview)**.
+3. Enter `LamnaHealthcareOntology` as the ontology name and select **Create**.
 
-> [!NOTE]
-> Add screenshot: Images/04-new-item-ontology.png
-
-> [!NOTE]
-> If **Ontology (preview)** is not visible, verify that your Fabric administrator enabled the `Enable Ontology item (preview)` tenant setting in [Exercise 00](00-Prerequisites.md).
-
-### Step 2: Name and Save the Ontology
-1. In the **New ontology** dialog box, enter the ontology name:
-
-```text
-LamnaHealthcareOntology
-```
-
-2. Click **Create**.
-
-> [!NOTE]
-> Add screenshot: Images/04-create-ontology.png
-
-### Step 3: Explore the Ontology Canvas
-1. Once created, Fabric automatically launches the **Ontology Canvas**.
-2. Note the primary layout sections:
+### Step 2: Explore the Ontology Canvas
+1. The ontology canvas opens, empty and ready for building your data model.
+2. Review the layout sections:
    - **Top Ribbon**: Actions for adding entity types, relationships, data bindings, and opening the Query Builder.
-   - **Canvas Center**: Visual graph editor displaying entity nodes and relationship arrows.
+   - **Canvas Center**: Visual editor for entity nodes and relationship connections.
    - **Left Explorer Pane**: List of entity types, properties, and relationships.
 
 ---
 
 ## Validation
 
-1. Verify that `LamnaHealthcareOntology` is listed in your workspace items.
-2. Verify that the canvas loads cleanly without schema errors.
+1. Verify that `LamnaHealthcareOntology` appears in your workspace item list.
+2. Confirm the ontology canvas opens cleanly.
 
 ---
 

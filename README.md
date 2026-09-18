@@ -93,17 +93,10 @@ Before starting the exercises, verify that your environment satisfies all setup 
 
 ---
 
-## Important Preview & Trial Limitations
+## Important Preview Limitations
 
-> [!WARNING]
-> **1. Feature Preview Status:**
-> **Fabric IQ Ontology**, **Fabric Graph**, and **Foundry IQ Knowledge Base** integration are currently in **Public Preview**. UI navigation, button placement, and specific menu labels are subject to change as Microsoft updates these services.
->
-> **2. Fabric Trial Capacity Restrictions:**
-> Standard **Microsoft Fabric Trial capacity** does not support all advanced AI and cross-cloud experiences. Features such as Data Agent, AI Functions, AI Services, Copilot, and Trusted Workspace Access may require a paid Fabric capacity (F-SKU).
->
-> **3. Capacity & NL2Ontology Note:**
-> Do **NOT** assume that upgrading to a paid Fabric capacity automatically resolves NL2Ontology or model execution errors. Fabric IQ preview features rely on regional AI deployment availability and specific tenant feature flags.
+> [!IMPORTANT]
+> **Preview Status:** Microsoft Fabric IQ Ontology and Microsoft Foundry AI features are currently in public preview. Interface navigation, menu labels, and portal configurations may vary as Microsoft updates these services.
 
 ---
 

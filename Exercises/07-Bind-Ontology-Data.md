@@ -17,78 +17,48 @@ Bind each entity type and relationship in `LamnaHealthcareOntology` to the corre
 For each entity type, perform the following binding steps:
 
 #### 1. Bind `Hospital` Entity
-1. Select the `Hospital` node on the canvas, click the ellipsis (`...`), and select **Bind data**.
-2. Click **Add data binding > Lakehouse table**.
-3. Select `LamnaHealthcareLH` and click **Next**.
-4. Select the `hospitals` table and click **Select**.
-5. Set Binding type to **Static**.
-6. Verify auto-mapped properties:
+1. Select the `Hospital` entity on the canvas, select the ellipsis (`...`) next to its name, and select **Bind data**.
+2. Select **Add data binding > Lakehouse table**.
+3. Select `LamnaHealthcareLH` and select **Next**.
+4. Select the `hospitals` table and select **Select**.
+5. Keep **Static** binding type.
+6. Verify property mappings:
    - Key: `HospitalId` → `HospitalId`
    - Properties: `HospitalName` → `HospitalName`, `City` → `City`, `State` → `State`
-7. Click **Save**.
+7. Select **Save**.
 
-> [!NOTE]
-> Add screenshot: Images/07-bind-hospital.png
+#### 2. Bind `Department`, `Room`, `Patient`, and `VitalSignEquipment`
+Follow the same process for the remaining four entities:
 
-#### 2. Bind `Department` Entity
-1. Select `Department` node > **Bind data > Add data binding > Lakehouse table**.
-2. Select `LamnaHealthcareLH` > `departments` table.
-3. Verify mappings:
-   - Key: `DepartmentId` → `DepartmentId`
-   - Properties: `DepartmentName` → `DepartmentName`, `HospitalId` → `HospitalId`, `Floor` → `Floor`
-4. Click **Save**.
-
-#### 3. Bind `Room` Entity
-1. Select `Room` node > **Bind data > Add data binding > Lakehouse table**.
-2. Select `LamnaHealthcareLH` > `rooms` table.
-3. Verify mappings:
-   - Key: `RoomId` → `RoomId`
-   - Properties: `RoomNumber` → `RoomNumber`, `DepartmentId` → `DepartmentId`, `RoomType` → `RoomType`
-4. Click **Save**.
-
-#### 4. Bind `Patient` Entity
-1. Select `Patient` node > **Bind data > Add data binding > Lakehouse table**.
-2. Select `LamnaHealthcareLH` > `patients` table.
-3. Verify mappings:
-   - Key: `PatientId` → `PatientId`
-   - Properties: `FirstName` → `FirstName`, `LastName` → `LastName`, `DateOfBirth` → `DateOfBirth`, `AdmissionDate` → `AdmissionDate`, `CurrentRoomId` → `CurrentRoomId`
-4. Click **Save**.
-
-> [!NOTE]
-> Add screenshot: Images/07-bind-patient.png
-
-#### 5. Bind `VitalSignEquipment` Entity
-1. Select `VitalSignEquipment` node > **Bind data > Add data binding > Lakehouse table**.
-2. Select `LamnaHealthcareLH` > `vitalsignequipment` table.
-3. Verify mappings:
-   - Key: `EquipmentId` → `EquipmentId`
-   - Properties: `PatientId` → `PatientId`, `EquipmentType` → `EquipmentType`, `MonitoringStartDate` → `MonitoringStartDate`, `RoomId` → `RoomId`
-4. Click **Save**.
+- **`Department`**: Bind to `departments` table. Map `DepartmentId` key and properties (`DepartmentName`, `HospitalId`, `Floor`).
+- **`Room`**: Bind to `rooms` table. Map `RoomId` key and properties (`RoomNumber`, `DepartmentId`, `RoomType`).
+- **`Patient`**: Bind to `patients` table. Map `PatientId` key and properties (`FirstName`, `LastName`, `DateOfBirth`, `AdmissionDate`, `CurrentRoomId`).
+- **`VitalSignEquipment`**: Bind to `vitalsignequipment` table. Map `EquipmentId` key and properties (`PatientId`, `EquipmentType`, `MonitoringStartDate`, `RoomId`).
 
 ---
 
 ### Step 2: Configure Relationship Key Mappings
 
-Configure the matching keys for each relationship line:
+Configure the matching key columns for each relationship line on the canvas:
 
-| Relationship Name | Origin Entity | Target Entity | Foreign Key Column Mapping |
+| Relationship Name | Origin Entity | Target Entity | Column Mapping |
 | :--- | :--- | :--- | :--- |
-| `contains` | `Hospital` | `Department` | `Hospital.HospitalId` = `Department.HospitalId` |
-| `has` | `Department` | `Room` | `Department.DepartmentId` = `Room.DepartmentId` |
-| `assignedTo` | `Patient` | `Room` | `Patient.CurrentRoomId` = `Room.RoomId` |
-| `monitors` | `VitalSignEquipment` | `Patient` | `VitalSignEquipment.PatientId` = `Patient.PatientId` |
-| `locatedIn` | `VitalSignEquipment` | `Room` | `VitalSignEquipment.RoomId` = `Room.RoomId` |
+| `contains` | `Hospital` | `Department` | `HospitalId` = `HospitalId` |
+| `has` | `Department` | `Room` | `DepartmentId` = `DepartmentId` |
+| `assignedTo` | `Patient` | `Room` | `CurrentRoomId` = `RoomId` |
+| `monitors` | `VitalSignEquipment` | `Patient` | `PatientId` = `PatientId` |
+| `locatedIn` | `VitalSignEquipment` | `Room` | `RoomId` = `RoomId` |
 
-1. On the canvas, click the `contains` relationship line.
-2. Set Origin key `HospitalId` to match Target foreign key `HospitalId`. Click **Save**.
+1. On the canvas, select the `contains` relationship line between `Hospital` and `Department`.
+2. Configure origin and target entity key mappings (`HospitalId` → `HospitalId`). Select **Save**.
 3. Repeat key binding for `has`, `assignedTo`, `monitors`, and `locatedIn` relationships.
 
 ---
 
 ## Validation
 
-1. Verify that a green checkmark or "Bound" status appears next to all 5 entities in the Explorer pane.
-2. Confirm that all 5 relationship lines show configured mapping indicators without missing key warnings.
+1. Verify that bound status icons appear next to all 5 entities in the Explorer pane.
+2. Confirm that all 5 relationship lines show configured mapping indicators.
 
 ---
 

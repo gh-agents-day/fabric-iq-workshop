@@ -7,38 +7,33 @@ Before starting the **Build an AI Agent with Microsoft Fabric IQ, Ontology, and 
 ## 1. Microsoft Fabric Capacity & Tenant Settings
 
 ### Required Licensing
-- Access to a **Microsoft Fabric Capacity** (F64 or higher recommended for full AI features, or an active **Fabric Trial** capacity).
+- Access to a **Microsoft Fabric Capacity** (Fabric Trial or paid Fabric Capacity).
 - **Fabric Administrator** or **Workspace Admin** permissions.
 
-> [!WARNING]
-> **Trial Capacity Limitations:**
-> Microsoft Fabric Trial capacity has specific platform restrictions. Certain advanced AI features — including Data Agent, AI Functions, AI Services, Copilot, and Trusted Workspace Access — are restricted or unavailable on standard Fabric Trial capacities.
->
-> **Important Note on Capacity & NL2Ontology:**
-> Upgrading to a paid Fabric capacity (F-SKU) resolves capacity throttling and unlocks enterprise features, but **does NOT automatically guarantee resolution of NL2Ontology or preview model compilation errors**. Fabric IQ preview capabilities depend on backend regional feature availability and tenant-level preview configurations.
+> [!IMPORTANT]
+> Ontology features in Microsoft Fabric are currently in preview. To complete this lab, you need access to a Fabric paid or trial capacity, and tenant settings for Ontology and Graph items must be enabled by a Fabric Administrator.
 
 ### Required Tenant Settings
 A Fabric Administrator must enable the following settings in the **Fabric Admin Portal** (`Settings > Admin portal > Tenant settings`):
 
 1. **Ontology (preview)**: Enable `Users can create and edit Ontology items (preview)`.
 2. **Graph (preview)**: Enable `Users can create Graph (preview)`.
-3. **Data Agent & AI Features**: Enable AI and Copilot experiences if available in your region.
 
 ---
 
-## 2. Microsoft Foundry (Azure AI Foundry) Setup
+## 2. Microsoft Foundry Setup
 
 ### Access Requirements
 - An active **Azure Subscription** with permissions to create resource groups and Azure AI resources (Contributor or Owner role).
-- Access to the **Microsoft Foundry portal** (`https://ai.azure.com` / `https://foundry.microsoft.com`).
-- Permission to deploy foundation models (e.g., GPT-4o or GPT-4o-mini) within your Azure AI Foundry project.
+- Access to the **Microsoft Foundry portal** (`https://ai.azure.com`).
+- Permission to deploy foundation models (such as GPT-4o or GPT-4o-mini) within your project.
 
 ---
 
 ## 3. Client Environment & Browser Requirements
 
 - **Browser**: Modern web browser (Microsoft Edge or Google Chrome recommended).
-- **Local File System Access**: Capability to download CSV datasets from this repository (`Data/` folder) and upload them to Microsoft Fabric.
+- **Local File System Access**: Ability to access CSV datasets from this repository (`Data/` folder) and upload them to Microsoft Fabric.
 
 ---
 
@@ -50,7 +45,7 @@ Ensure you have cloned or downloaded this repository to access the following dat
 - [`Data/rooms.csv`](file:///c:/Users/Praveenr/Desktop/demo/fabricIQ%20workshop/Data/rooms.csv)
 - [`Data/patients.csv`](file:///c:/Users/Praveenr/Desktop/demo/fabricIQ%20workshop/Data/patients.csv)
 - [`Data/vitalsignequipment.csv`](file:///c:/Users/Praveenr/Desktop/demo/fabricIQ%20workshop/Data/vitalsignequipment.csv)
-- [`Data/vitalsignsreadings.csv`](file:///c:/Users/Praveenr/Desktop/demo/fabricIQ%20workshop/Data/vitalsignsreadings.csv) (Time-series data for Real-Time Eventhouse streaming)
+- [`Data/vitalsignsreadings.csv`](file:///c:/Users/Praveenr/Desktop/demo/fabricIQ%20workshop/Data/vitalsignsreadings.csv)
 
 ---
 

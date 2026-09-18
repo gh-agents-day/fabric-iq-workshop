@@ -1,9 +1,9 @@
 # Workshop Image Assets
 
-This directory stores screenshot assets referenced throughout the workshop exercises.
+This directory stores screenshot assets for the workshop exercises.
 
 ## Naming Conventions
-Place screenshots here using descriptive PNG filenames matching the exercise step:
+Place exercise screenshots using descriptive PNG filenames:
 - `01-create-workspace.png`
 - `02-create-lakehouse.png`
 - `03-upload-csv.png`
@@ -20,6 +20,3 @@ Place screenshots here using descriptive PNG filenames matching the exercise ste
 - `11-connect-ontology.png`
 - `12-create-agent.png`
 - `13-test-agent-query.png`
-
-> [!NOTE]
-> All images in exercises are linked using relative paths: `Images/<filename>.png`.

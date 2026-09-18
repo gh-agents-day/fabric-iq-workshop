@@ -13,98 +13,59 @@ Define the 5 domain entity types (`Hospital`, `Department`, `Room`, `Patient`, `
 ## Steps
 
 ### Step 1: Create `Hospital` Entity Type
-1. In the `LamnaHealthcareOntology` ribbon, click **Add entity type**.
-2. Enter `Hospital` as the entity type name and click **Add Entity Type**.
-3. Select the `Hospital` node on the canvas, then click **View entity type details** (or edit properties).
-4. Under **Properties**, click **Add properties** and create the following fields:
+1. In the ontology ribbon, select **Add entity type**.
+2. Enter `Hospital` as the entity type name and select **Add Entity Type**.
+3. Select the `Hospital` entity type on the canvas, then select **View entity type details** in the ribbon.
+4. In the **Properties** section, select **Manage property bindings > Add properties**.
+5. Add each property by entering details and selecting **+ Add**:
+   - `HospitalId` (Integer)
+   - `HospitalName` (String)
+   - `City` (String)
+   - `State` (String)
+6. Select **Save**.
+7. Select **Define entity type key**, choose `HospitalId` as the key, and select **Save**.
+8. Select **Home** to return to the ontology canvas.
 
-| Property Name | Property Type |
-| :--- | :--- |
-| `HospitalId` | String |
-| `HospitalName` | String |
-| `City` | String |
-| `State` | String |
+### Step 2: Create Remaining Entity Types
+Follow the same process to create the remaining four entity types with their properties and keys:
 
-5. Click **Define entity type key**, select `HospitalId`, and click **Save**.
+#### `Department`
+- **Name**: `Department`
+- **Properties**: `DepartmentId` (Integer), `DepartmentName` (String), `HospitalId` (Integer), `Floor` (Integer)
+- **Entity Key**: `DepartmentId`
 
-> [!NOTE]
-> Add screenshot: Images/05-entity-hospital.png
+#### `Room`
+- **Name**: `Room`
+- **Properties**: `RoomId` (Integer), `RoomNumber` (String), `DepartmentId` (Integer), `RoomType` (String)
+- **Entity Key**: `RoomId`
 
-### Step 2: Create `Department` Entity Type
-1. Click **Add entity type** in the ribbon. Name: `Department`.
-2. Open properties for `Department` and add the following fields:
+#### `Patient`
+- **Name**: `Patient`
+- **Properties**: `PatientId` (Integer), `FirstName` (String), `LastName` (String), `DateOfBirth` (String), `AdmissionDate` (String), `CurrentRoomId` (Integer)
+- **Entity Key**: `PatientId`
 
-| Property Name | Property Type |
-| :--- | :--- |
-| `DepartmentId` | String |
-| `DepartmentName` | String |
-| `HospitalId` | String |
-| `Floor` | Integer |
-
-3. Click **Define entity type key**, select `DepartmentId`, and click **Save**.
-
-### Step 3: Create `Room` Entity Type
-1. Click **Add entity type** in the ribbon. Name: `Room`.
-2. Open properties for `Room` and add the following fields:
-
-| Property Name | Property Type |
-| :--- | :--- |
-| `RoomId` | String |
-| `RoomNumber` | String |
-| `DepartmentId` | String |
-| `RoomType` | String |
-
-3. Click **Define entity type key**, select `RoomId`, and click **Save**.
-
-### Step 4: Create `Patient` Entity Type
-1. Click **Add entity type** in the ribbon. Name: `Patient`.
-2. Open properties for `Patient` and add the following fields:
-
-| Property Name | Property Type |
-| :--- | :--- |
-| `PatientId` | Integer |
-| `FirstName` | String |
-| `LastName` | String |
-| `DateOfBirth` | Date |
-| `AdmissionDate` | Date |
-| `CurrentRoomId` | String |
-
-3. Click **Define entity type key**, select `PatientId`, and click **Save**.
-
-> [!NOTE]
-> Add screenshot: Images/05-entity-patient.png
-
-### Step 5: Create `VitalSignEquipment` Entity Type
-1. Click **Add entity type** in the ribbon. Name: `VitalSignEquipment`.
-2. Open properties for `VitalSignEquipment` and add the following fields:
-
-| Property Name | Property Type |
-| :--- | :--- |
-| `EquipmentId` | String |
-| `PatientId` | Integer |
-| `EquipmentType` | String |
-| `MonitoringStartDate` | DateTime |
-| `RoomId` | String |
-
-3. Click **Define entity type key**, select `EquipmentId`, and click **Save**.
+#### `VitalSignEquipment`
+- **Name**: `VitalSignEquipment`
+- **Properties**: `EquipmentId` (String), `PatientId` (Integer), `EquipmentType` (String), `MonitoringStartDate` (String), `RoomId` (Integer)
+- **Entity Key**: `EquipmentId`
 
 ---
 
 ## Validation
 
-1. Inspect the left **Entity Types** pane in the Ontology canvas.
-2. Confirm that all 5 entity types are listed:
+1. Verify that the **Entity Types** pane displays all 5 entity types:
    - `Hospital` (Key: `HospitalId`)
    - `Department` (Key: `DepartmentId`)
    - `Room` (Key: `RoomId`)
    - `Patient` (Key: `PatientId`)
    - `VitalSignEquipment` (Key: `EquipmentId`)
+2. Confirm properties and entity type keys are defined for each entity.
 
 ---
 
 ## Expected Result
 
-All 5 entity types are defined on the canvas with appropriate property schemas and primary keys.
+All 5 entity types are created on the canvas with appropriate property schemas and primary keys.
 
 ---
 

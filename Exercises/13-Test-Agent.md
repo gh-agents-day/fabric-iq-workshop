@@ -13,12 +13,9 @@ Execute test queries against `LamnaHealthcareAgent` in Microsoft Foundry to vali
 ## Steps
 
 ### Step 1: Open Agent Playground
-1. In `LamnaHealthcareFoundryProject`, open **Agents > LamnaHealthcareAgent**.
-2. Click **Try in playground** (or open the interactive Chat pane).
-3. Ensure the active model deployment is set to `gpt-4o` and tool `LamnaHealthcareKnowledge` is enabled.
-
-> [!NOTE]
-> Add screenshot: Images/13-agent-playground.png
+1. In `LamnaHealthcareFoundryProject`, select **Agents > LamnaHealthcareAgent**.
+2. Select **Try in playground** (or open the Chat pane).
+3. Ensure the active model deployment is `gpt-4o` and `LamnaHealthcareKnowledge` tool is enabled.
 
 ### Step 2: Execute Test Scenarios
 
@@ -84,9 +81,6 @@ Which patients are currently being monitored?
 Show the room and monitoring equipment associated with PatientId 1001.
 ```
 
-> [!NOTE]
-> Add screenshot: Images/13-test-agent-query.png
-
 **Expected Response:**
 - Patient: Kerry Allen (PatientId: `1001`)
 - Assigned Room: Room `1` (`ICU-301`, Department: `Intensive Care Unit`)
@@ -109,7 +103,7 @@ What is the prescription dosage for PatientId 9999?
 
 ## Validation
 
-1. Verify that all 6 positive queries accurately reflect data in `Patients.csv`, `Rooms.csv`, and `VitalSignEquipment.csv`.
+1. Verify that all 6 positive queries accurately reflect data in `patients.csv`, `rooms.csv`, and `vitalsignequipment.csv`.
 2. Verify that the agent correctly traverses graph relationships (`Patient` → `Room`, `VitalSignEquipment` → `Patient`).
 3. Verify that the safety guardrail prevents invented answers for non-existent IDs.
 

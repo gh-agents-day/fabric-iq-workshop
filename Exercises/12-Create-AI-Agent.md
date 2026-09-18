@@ -14,20 +14,12 @@ Build and configure a grounded Microsoft Foundry AI Agent named `LamnaHealthcare
 
 ### Step 1: Provision AI Agent in Foundry
 1. In `LamnaHealthcareFoundryProject`, select **Agents** from the left navigation menu.
-2. Click **+ Create agent** (or **+ New agent**).
-3. Set agent name:
-
-```text
-LamnaHealthcareAgent
-```
-
+2. Select **+ Create agent**.
+3. Set agent name to `LamnaHealthcareAgent`.
 4. Select model deployment: `gpt-4o`.
 
-> [!NOTE]
-> Add screenshot: Images/12-create-agent.png
-
 ### Step 2: Configure System Instructions
-In the **Instructions** text box, paste the following system prompt:
+In the **Instructions** text box, enter the following system prompt:
 
 ```text
 You are a healthcare data assistant.
@@ -42,10 +34,9 @@ Do not invent healthcare data. If information cannot be retrieved from the ontol
 ```
 
 ### Step 3: Attach Foundry IQ Knowledge Base Tool
-1. Under **Tools**, click **+ Add tool > Knowledge Base** (or **Foundry IQ Tool**).
+1. Under **Tools**, select **+ Add tool > Knowledge Base**.
 2. Select `LamnaHealthcareKnowledge`.
-3. Set strict grounding mode to **Enabled** (temperature: `0.0`).
-4. Click **Save agent**.
+3. Select **Save agent**.
 
 ---
 

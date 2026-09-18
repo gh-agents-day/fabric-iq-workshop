@@ -14,27 +14,20 @@ Create a Foundry IQ Knowledge Base named `LamnaHealthcareKnowledge` inside `Lamn
 
 ### Step 1: Navigate to Knowledge Bases in Foundry
 1. In `LamnaHealthcareFoundryProject`, locate the left navigation menu.
-2. Under **Knowledge** (or **Data & Indexes**), click **Knowledge bases** (or **Foundry IQ**).
-3. Click **+ Create knowledge base**.
-
-> [!NOTE]
-> Add screenshot: Images/10-knowledge-base-menu.png
+2. Select **Knowledge bases** (or **Knowledge**).
+3. Select **+ Create knowledge base**.
 
 ### Step 2: Configure Knowledge Base Details
-1. In the Knowledge Base creation wizard, enter:
+1. Configure the knowledge base properties:
 
 | Setting | Value |
 | :--- | :--- |
 | **Knowledge Base Name** | `LamnaHealthcareKnowledge` |
 | **Description** | Grounded healthcare knowledge base backed by Fabric IQ Ontology. |
-| **Indexing Mode** | Semantic & Graph Indexing |
 
-2. Click **Next**.
+2. Select **Next**.
 
-> [!NOTE]
-> Add screenshot: Images/10-foundry-iq-knowledge-base.png
-
-### Step 3: Select Fabric IQ Knowledge Source Type
+### Step 3: Select Data Source Type
 1. Under **Select data source type**, choose **Microsoft Fabric IQ / Fabric Ontology (preview)**.
 2. Select **Microsoft Fabric Connection**.
 
@@ -43,13 +36,13 @@ Create a Foundry IQ Knowledge Base named `LamnaHealthcareKnowledge` inside `Lamn
 ## Validation
 
 1. Verify that `LamnaHealthcareKnowledge` appears in the list of Knowledge Bases.
-2. Confirm status is set to **Draft / Awaiting Source Configuration**.
+2. Confirm the knowledge base shell is created.
 
 ---
 
 ## Expected Result
 
-The `LamnaHealthcareKnowledge` Knowledge Base shell is provisioned in Microsoft Foundry.
+The `LamnaHealthcareKnowledge` Knowledge Base is provisioned in Microsoft Foundry.
 
 ---
 
