@@ -24,6 +24,8 @@ Create an empty **Fabric IQ Ontology** item named `LamnaHealthcareOntology` with
    - **Canvas Center**: Visual editor for entity nodes and relationship connections.
    - **Left Explorer Pane**: List of entity types, properties, and relationships.
 
+![Fabric IQ Ontology Canvas Layout](../Images/Ontology%20canvas.png)
+
 ---
 
 ## Validation

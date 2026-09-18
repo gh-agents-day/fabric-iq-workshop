@@ -39,6 +39,8 @@ LamnaHealthcareLH
 1. Navigate back to the `LamnaHealthcareWS` workspace view.
 2. Confirm that the `LamnaHealthcareLH` lakehouse item is listed.
 
+![Lakehouse Provisioning Preview](../Images/02-create-lakehouse.png)
+
 ---
 
 ## Expected Result

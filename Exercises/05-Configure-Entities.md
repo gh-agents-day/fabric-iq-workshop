@@ -26,6 +26,8 @@ Define the 5 domain entity types (`Hospital`, `Department`, `Room`, `Patient`, `
 7. Select **Define entity type key**, choose `HospitalId` as the key, and select **Save**.
 8. Select **Home** to return to the ontology canvas.
 
+![Hospital Entity Configuration](../Images/05-entity-hospital.png)
+
 ### Step 2: Create Remaining Entity Types
 Follow the same process to create the remaining four entity types with their properties and keys:
 

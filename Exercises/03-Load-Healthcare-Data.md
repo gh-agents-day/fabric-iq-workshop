@@ -25,7 +25,11 @@ Upload the sample healthcare CSV datasets into the `LamnaHealthcareLH` lakehouse
 > [!NOTE]
 > `vitalsignsreadings.csv` contains real-time time-series measurements (heart rate, oxygen saturation). In advanced scenarios, time-series data is ingested into an Eventhouse table rather than static lakehouse tables.
 
+![KQL Database VitalSignsReadings Data Preview](../Images/timesseries.png)
+
 4. Select **Upload** to upload all five files.
+
+![Uploaded CSV Files in Lakehouse](../Images/03-upload-csv.png)
 
 ### Step 2: Convert CSV Files to Tables
 Convert each uploaded file into a Lakehouse table:

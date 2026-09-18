@@ -20,6 +20,8 @@ Model graph relationships between domain entities in `LamnaHealthcareOntology` t
    - **Target entity type**: `Department`
 3. Select **Create**. The `contains` relationship line connects `Hospital` to `Department`.
 
+![Contains Relationship Configuration](../Images/relationship-contains.png)
+
 ### Step 2: Create Remaining Relationships
 Follow the same process to create these four additional relationships:
 
@@ -35,6 +37,8 @@ Follow the same process to create these four additional relationships:
 ## Validation
 
 Review the Ontology Canvas relationship graph. Verify that all 5 relationships are visually rendered connecting the entities:
+
+![Fabric IQ Relationship Graph](../Images/relationship-graph.png)
 
 ```text
 [Hospital] ───(contains)───► [Department] ───(has)───► [Room]
