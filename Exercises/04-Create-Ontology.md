@@ -21,9 +21,8 @@ Create an empty Fabric IQ ontology named `LamnaHealthcareOntology` to model heal
 
 ## Validation
 
-Verify that the `LamnaHealthcareOntology` item is created and opened in canvas mode as shown in the image below:
-
-![Fabric IQ Ontology Canvas](../Images/Ontology%20canvas.png)
+1. Verify that `LamnaHealthcareOntology` appears in your workspace item list.
+2. Confirm the empty ontology canvas opens in editing mode.
 
 ---
 
@@ -35,4 +34,4 @@ An empty ontology canvas `LamnaHealthcareOntology` is open and ready for entity 
 
 ## Next Exercise
 
-Proceed to [Exercise 05: Configure Entities](05-Configure-Entities.md).
+Proceed to [Exercise 05: Create Entity Types](05-Configure-Entities.md).

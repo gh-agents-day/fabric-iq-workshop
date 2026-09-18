@@ -6,7 +6,7 @@
 
 ## Objective
 
-Create five entity types representing the healthcare domain (`Hospital`, `Department`, `Room`, `Patient`, `VitalSignEquipment`), define their properties, and set primary entity keys.
+You’ll create five entity types representing the healthcare domain (`Hospital`, `Department`, `Room`, `Patient`, `VitalSignEquipment`), define their properties, and configure entity keys.
 
 ---
 
@@ -15,53 +15,45 @@ Create five entity types representing the healthcare domain (`Hospital`, `Depart
 ### Step 1: Create Hospital Entity Type
 1. In the ontology ribbon, select **Add entity type**.
 2. Enter `Hospital` as the entity type name and select **Add Entity Type**.
-3. With `Hospital` selected, select **View entity type details** in the ribbon to open its configuration page.
-4. In the **Properties** section, expand **Manage property bindings** and select **Add properties**.
-5. Add each property by entering details and selecting **+ Add**:
-   - `HospitalId` (Integer)
-   - `HospitalName` (String)
-   - `City` (String)
-   - `State` (String)
-6. Select **Save**.
-7. Select **Define entity type key**, choose `HospitalId` as the key, and select **Save**.
-8. Select **Home** to return to the ontology canvas.
+3. The `Hospital` entity type appears on the canvas.
+4. With the `Hospital` entity type selected, select **View entity type details** in the ribbon to open the entity type’s Configure page.
+5. In the **Properties** section, find and expand **Manage property bindings** and select **Add properties**.
+6. Add each property by entering the details below and selecting **+ Add** after each one:
+
+| Property Name | Property Type |
+| :--- | :--- |
+| `HospitalId` | `Integer` |
+| `HospitalName` | `String` |
+| `City` | `String` |
+| `State` | `String` |
+
+7. After adding all properties, select **Save**.
+8. Now define an entity key: Select **Define entity type key**, choose `HospitalId` as the key, and select **Save**.
+9. Select **Home** to return to the ontology canvas.
 
 ### Step 2: Create Remaining Entity Types
-Follow the same process to create the remaining four entity types with their properties and keys:
+Follow the same process to create these four additional entity types with their properties and keys:
 
-#### `Department`
-- **Name**: `Department`
-- **Properties**: `DepartmentId` (Integer), `DepartmentName` (String), `HospitalId` (Integer), `Floor` (Integer)
-- **Entity Key**: `DepartmentId`
-
-#### `Room`
-- **Name**: `Room`
-- **Properties**: `RoomId` (Integer), `RoomNumber` (String), `DepartmentId` (Integer), `RoomType` (String)
-- **Entity Key**: `RoomId`
-
-#### `Patient`
-- **Name**: `Patient`
-- **Properties**: `PatientId` (Integer), `FirstName` (String), `LastName` (String), `DateOfBirth` (String), `AdmissionDate` (String), `CurrentRoomId` (Integer)
-- **Entity Key**: `PatientId`
-
-#### `VitalSignEquipment`
-- **Name**: `VitalSignEquipment`
-- **Properties**: `EquipmentId` (String), `PatientId` (Integer), `EquipmentType` (String), `MonitoringStartDate` (String)
-- **Entity Key**: `EquipmentId`
+| Entity Type | Property Name | Property Type | Entity Type Key |
+| :--- | :--- | :--- | :--- |
+| **Department** | `DepartmentId`<br>`DepartmentName`<br>`HospitalId`<br>`Floor` | `Integer`<br>`String`<br>`Integer`<br>`Integer` | `DepartmentId` |
+| **Room** | `RoomId`<br>`RoomNumber`<br>`DepartmentId`<br>`RoomType` | `Integer`<br>`String`<br>`Integer`<br>`String` | `RoomId` |
+| **Patient** | `PatientId`<br>`FirstName`<br>`LastName`<br>`DateOfBirth`<br>`AdmissionDate`<br>`CurrentRoomId` | `Integer`<br>`String`<br>`String`<br>`DateTime`<br>`DateTime`<br>`Integer` | `PatientId` |
+| **VitalSignEquipment** | `EquipmentId`<br>`PatientId`<br>`EquipmentType`<br>`MonitoringStartDate` | `String`<br>`Integer`<br>`String`<br>`DateTime` | `EquipmentId` |
 
 ---
 
 ## Validation
 
-Verify that the **Entity Types** pane shows all five entity types, and that properties and entity type key have been defined for each entity as shown in the image below:
+You now have five entity types with properties and keys defined. Verify that the Entity Types pane shows all five entity types, and that properties and entity type key have been defined for each entity as shown in the image below:
 
-![Five Entity Types Configured in Ontology Canvas](../Images/05-entity-hospital.png)
+![Entity Types Configured in Ontology Canvas](../Images/05-entity-hospital.png)
 
 ---
 
 ## Expected Result
 
-Five domain entity types with defined keys and properties appear in `LamnaHealthcareOntology`.
+Five entity types (`Hospital`, `Department`, `Room`, `Patient`, `VitalSignEquipment`) are configured with property types and primary keys.
 
 ---
 
