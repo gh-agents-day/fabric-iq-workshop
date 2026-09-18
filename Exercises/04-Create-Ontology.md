@@ -1,43 +1,35 @@
-# Exercise 04: Create Ontology
+# Exercise 04: Create an Ontology
 
-[← Previous Exercise: Load Healthcare Data](03-Load-Healthcare-Data.md) | [Home](../README.md) | [Next Exercise: Configure Entities →](05-Configure-Entities.md)
+[← Previous Exercise: Create Eventhouse with Streaming Data](03-Load-Healthcare-Data.md) | [Home](../README.md) | [Next Exercise: Create Entity Types →](05-Configure-Entities.md)
 
 ---
 
 ## Objective
 
-Create an empty **Fabric IQ Ontology** item named `LamnaHealthcareOntology` within the `LamnaHealthcareWS` workspace.
+Create an empty Fabric IQ ontology named `LamnaHealthcareOntology` to model healthcare entity types, properties, and relationships.
 
 ---
 
 ## Steps
 
 ### Step 1: Provision Ontology Item
-1. In your `LamnaHealthcareWS` workspace, select **+ New item**.
-2. Select **Ontology (preview)**.
-3. Enter `LamnaHealthcareOntology` as the ontology name and select **Create**.
-
-### Step 2: Explore the Ontology Canvas
-1. The ontology canvas opens, empty and ready for building your data model.
-2. Review the layout sections:
-   - **Top Ribbon**: Actions for adding entity types, relationships, data bindings, and opening the Query Builder.
-   - **Canvas Center**: Visual editor for entity nodes and relationship connections.
-   - **Left Explorer Pane**: List of entity types, properties, and relationships.
-
-![Fabric IQ Ontology Canvas Layout](../Images/Ontology%20canvas.png)
+1. In your `LamnaHealthcareWS` workspace, select **+ New item > Ontology (preview)**.
+2. Name the ontology `LamnaHealthcareOntology` and select **Create**.
+3. The ontology canvas opens, empty and ready for you to build your data model.
 
 ---
 
 ## Validation
 
-1. Verify that `LamnaHealthcareOntology` appears in your workspace item list.
-2. Confirm the ontology canvas opens cleanly.
+Verify that the `LamnaHealthcareOntology` item is created and opened in canvas mode as shown in the image below:
+
+![Fabric IQ Ontology Canvas](../Images/Ontology%20canvas.png)
 
 ---
 
 ## Expected Result
 
-An empty ontology item `LamnaHealthcareOntology` is provisioned and opened in canvas editing mode.
+An empty ontology canvas `LamnaHealthcareOntology` is open and ready for entity creation.
 
 ---
 

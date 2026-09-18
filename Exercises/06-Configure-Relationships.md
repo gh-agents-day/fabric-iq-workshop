@@ -1,65 +1,55 @@
-# Exercise 06: Configure Relationships
+# Exercise 06: Create Relationship Types
 
-[← Previous Exercise: Configure Entities](05-Configure-Entities.md) | [Home](../README.md) | [Next Exercise: Bind Ontology Data →](07-Bind-Ontology-Data.md)
+[← Previous Exercise: Configure Entities](05-Configure-Entities.md) | [Home](../README.md) | [Next Exercise: Bind Entity Types to Data →](07-Bind-Ontology-Data.md)
 
 ---
 
 ## Objective
 
-Model graph relationships between domain entities in `LamnaHealthcareOntology` to establish domain context and traversal capabilities.
+Create relationship types that model healthcare domain connections: `Hospital` → `Department` → `Room` → `Patient`, with `VitalSignEquipment` monitoring `Patient` and located in `Room`.
 
 ---
 
 ## Steps
 
-### Step 1: Create `contains` Relationship (Hospital → Department)
+### Step 1: Create Hospital-Department Relationship
 1. In the ribbon, select **Add relationship**.
-2. Configure the relationship dialog:
+2. In the **Add relationship type to ontology** dialog, configure:
    - **Relationship type name**: `contains`
    - **Origin entity type**: `Hospital`
    - **Target entity type**: `Department`
-3. Select **Create**. The `contains` relationship line connects `Hospital` to `Department`.
+3. Select **Create**.
 
-![Contains Relationship Configuration](../Images/relationship-contains.png)
+The `contains` relationship dialog configuration is shown in the image below:
+
+![Add New Relationship Dialog](../Images/relationship-contains.png)
 
 ### Step 2: Create Remaining Relationships
 Follow the same process to create these four additional relationships:
 
 | Relationship Name | Origin Entity Type | Target Entity Type | Description |
 | :--- | :--- | :--- | :--- |
-| `has` | `Department` | `Room` | Department contains rooms |
-| `assignedTo` | `Patient` | `Room` | Patient is assigned to a room |
+| `has` | `Department` | `Room` | Department has rooms |
+| `assignedTo` | `Patient` | `Room` | Patient is assigned to room |
 | `monitors` | `VitalSignEquipment` | `Patient` | Equipment monitors patient |
-| `locatedIn` | `VitalSignEquipment` | `Room` | Equipment is located in a room |
+| `locatedIn` | `VitalSignEquipment` | `Room` | Equipment is located in room |
 
 ---
 
 ## Validation
 
-Review the Ontology Canvas relationship graph. Verify that all 5 relationships are visually rendered connecting the entities:
+Verify that your ontology canvas displays all entity nodes and connecting relationship lines as shown in the image below:
 
-![Fabric IQ Relationship Graph](../Images/relationship-graph.png)
-
-```text
-[Hospital] ───(contains)───► [Department] ───(has)───► [Room]
-                                                         ▲         ▲
-                                                         │         │
-[Patient] ──────────────────(assignedTo)─────────────────┘         │
-    ▲                                                              │
-    │                                                              │
-    └───────────────────────(monitors)─────────────────────────────┼── [VitalSignEquipment]
-                                                                   │
-                                                                   └───(locatedIn)
-```
+![Ontology Canvas Relationship Graph](../Images/relationship-graph.png)
 
 ---
 
 ## Expected Result
 
-The 5 semantic relationships are created, connecting entity types into an interconnected domain graph.
+The ontology structure is complete with 5 entity types connected by 5 semantic relationship lines.
 
 ---
 
 ## Next Exercise
 
-Proceed to [Exercise 07: Bind Ontology Data](07-Bind-Ontology-Data.md).
+Proceed to [Exercise 07: Bind Entity Types to Data](07-Bind-Ontology-Data.md).

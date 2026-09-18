@@ -107,14 +107,14 @@ The workshop consists of 14 step-by-step hands-on exercises:
 | Exercise | Description | Focus Area |
 | :--- | :--- | :--- |
 | [**00-Prerequisites**](Exercises/00-Prerequisites.md) | Verify Fabric tenant settings, capacities, and Foundry permissions. | Environment Validation |
-| [**01-Create-Fabric-Workspace**](Exercises/01-Create-Fabric-Workspace.md) | Create a dedicated Fabric Workspace with Trial/Paid capacity. | Infrastructure Setup |
-| [**02-Create-Lakehouse**](Exercises/02-Create-Lakehouse.md) | Provision `LamnaHealthcareLH` lakehouse. | Data Storage |
-| [**03-Load-Healthcare-Data**](Exercises/03-Load-Healthcare-Data.md) | Upload CSV files and transform them into Delta Lake tables. | Data Ingestion |
+| [**01-Create-Fabric-Workspace**](Exercises/01-Create-Fabric-Workspace.md) | Create a dedicated Fabric Workspace (`LamnaHealthcareWS`). | Infrastructure Setup |
+| [**02-Create-Lakehouse**](Exercises/02-Create-Lakehouse.md) | Provision `LamnaHealthcareLH` lakehouse, upload CSVs, and load Delta tables. | Data Lakehouse |
+| [**03-Load-Healthcare-Data**](Exercises/03-Load-Healthcare-Data.md) | Provision `LamnaHealthcareEH` eventhouse and ingest time-series data. | Streaming Data Ingestion |
 | [**04-Create-Ontology**](Exercises/04-Create-Ontology.md) | Provision `LamnaHealthcareOntology` preview item. | Semantic Modeling |
-| [**05-Configure-Entities**](Exercises/05-Configure-Entities.md) | Define `Hospital`, `Department`, `Room`, `Patient`, and `VitalSignEquipment` entities and keys. | Entity Modeling |
+| [**05-Configure-Entities**](Exercises/05-Configure-Entities.md) | Define `Hospital`, `Department`, `Room`, `Patient`, and `VitalSignEquipment` entities. | Entity Modeling |
 | [**06-Configure-Relationships**](Exercises/06-Configure-Relationships.md) | Define graph relationships (`contains`, `has`, `assignedTo`, `monitors`, `locatedIn`). | Graph Modeling |
-| [**07-Bind-Ontology-Data**](Exercises/07-Bind-Ontology-Data.md) | Bind entity types and property fields to Lakehouse Delta tables. | Data Binding |
-| [**08-Test-Ontology**](Exercises/08-Test-Ontology.md) | Validate ontology graph traversal using Query Builder for `PatientId 1001`. | Ontology Validation |
+| [**07-Bind-Ontology-Data**](Exercises/07-Bind-Ontology-Data.md) | Bind entity types and properties to Lakehouse and Eventhouse tables. | Data Binding |
+| [**08-Test-Ontology**](Exercises/08-Test-Ontology.md) | Preview ontology overview, relationship graph, and run Query Builder tests. | Ontology Validation |
 | [**09-Create-Foundry-Project**](Exercises/09-Create-Foundry-Project.md) | Set up a Microsoft Foundry AI project and deploy LLM models. | AI Infrastructure |
 | [**10-Create-Foundry-IQ-Knowledge-Base**](Exercises/10-Create-Foundry-IQ-Knowledge-Base.md) | Create `LamnaHealthcareKnowledge` in Microsoft Foundry. | Knowledge Base |
 | [**11-Connect-Ontology-to-Foundry**](Exercises/11-Connect-Ontology-to-Foundry.md) | Establish a Knowledge Source connection between Fabric IQ and Foundry IQ. | Fabric-Foundry Integration |

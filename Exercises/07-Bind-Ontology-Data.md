@@ -1,45 +1,65 @@
-# Exercise 07: Bind Ontology Data
+# Exercise 07: Bind Entity Types to Data & Configure Relationships
 
-[← Previous Exercise: Configure Relationships](06-Configure-Relationships.md) | [Home](../README.md) | [Next Exercise: Test Ontology →](08-Test-Ontology.md)
+[← Previous Exercise: Create Relationship Types](06-Configure-Relationships.md) | [Home](../README.md) | [Next Exercise: Preview the Ontology →](08-Test-Ontology.md)
 
 ---
 
 ## Objective
 
-Bind each entity type and relationship in `LamnaHealthcareOntology` to the corresponding Delta Lake tables in `LamnaHealthcareLH`.
+Bind entity properties to actual data sources (static Lakehouse Delta tables and time-series Eventhouse tables) and configure relationship key mappings.
 
 ---
 
 ## Steps
 
-### Step 1: Bind Entity Types to Lakehouse Tables
-
-For each entity type, perform the following binding steps:
+### Step 1: Bind Static Lakehouse Data
 
 #### 1. Bind `Hospital` Entity
-1. Select the `Hospital` entity on the canvas, select the ellipsis (`...`) next to its name, and select **Bind data**.
-2. Select **Add data binding > Lakehouse table**.
-3. Select `LamnaHealthcareLH` and select **Next**.
-4. Select the `hospitals` table and select **Select**.
-5. Keep **Static** binding type.
-6. Verify property mappings:
-   - Key: `HospitalId` → `HospitalId`
-   - Properties: `HospitalName` → `HospitalName`, `City` → `City`, `State` → `State`
-7. Select **Save**.
+1. Select `Hospital` on the canvas, select the ellipsis (`...`) next to its name, and select **Bind data**.
+2. Select **Add data binding > Lakehouse table**. Select `LamnaHealthcareLH` and select **Next**.
+3. Select the `hospitals` table and select **Select**.
+4. For Binding type, keep **Static**.
+5. Map properties to columns:
+   - `HospitalId` → `HospitalId`
+   - `HospitalName` → `HospitalName`
+   - `City` → `City`
+   - `State` → `State`
+6. Select **Save**.
 
-#### 2. Bind `Department`, `Room`, `Patient`, and `VitalSignEquipment`
-Follow the same process for the remaining four entities:
-
-- **`Department`**: Bind to `departments` table. Map `DepartmentId` key and properties (`DepartmentName`, `HospitalId`, `Floor`).
-- **`Room`**: Bind to `rooms` table. Map `RoomId` key and properties (`RoomNumber`, `DepartmentId`, `RoomType`).
-- **`Patient`**: Bind to `patients` table. Map `PatientId` key and properties (`FirstName`, `LastName`, `DateOfBirth`, `AdmissionDate`, `CurrentRoomId`).
-- **`VitalSignEquipment`**: Bind to `vitalsignequipment` table. Map `EquipmentId` key and properties (`PatientId`, `EquipmentType`, `MonitoringStartDate`, `RoomId`).
+#### 2. Bind `Department`, `Room`, and `Patient` Entities
+Follow the same process for static bindings:
+- **`Department`**: Select `departments` table. Map `DepartmentId`, `DepartmentName`, `HospitalId`, `Floor`.
+- **`Room`**: Select `rooms` table. Map `RoomId`, `RoomNumber`, `DepartmentId`, `RoomType`.
+- **`Patient`**: Select `patients` table. Map `PatientId`, `FirstName`, `LastName`, `DateOfBirth`, `AdmissionDate`, `CurrentRoomId`.
 
 ---
 
-### Step 2: Configure Relationship Key Mappings
+### Step 2: Bind VitalSignEquipment Static & Time-Series Data
 
-Configure the matching key columns for each relationship line on the canvas:
+#### 1. Bind Static Equipment Data
+1. Select `VitalSignEquipment` > **Bind data > Add data binding > Lakehouse table**.
+2. Select `LamnaHealthcareLH` > `vitalsignequipment` table.
+3. Map static properties (`EquipmentId`, `PatientId`, `EquipmentType`, `MonitoringStartDate`, `RoomId`).
+4. Select **Save**.
+
+#### 2. Bind Time-Series Vital Signs Data
+1. Select `VitalSignEquipment` > **Bind data > Add data binding > Eventhouse table**.
+2. Select `LamnaHealthcareEH` > `VitalSignsReadings` table.
+3. Under Timeseries data, select `Timestamp`.
+4. Verify key mapping (`EquipmentId` auto-matched).
+5. Map time-series measurement columns:
+   - `ReadingId` → `ReadingId`
+   - `Timestamp` → `Timestamp`
+   - `HeartRate` → `HeartRate`
+   - `OxygenSaturation` → `OxygenSaturation`
+   - `RespiratoryRate` → `RespiratoryRate`
+6. Select **Save**.
+
+---
+
+### Step 3: Configure Relationship Key Mappings
+
+On the ontology canvas, configure key column mappings for each relationship:
 
 | Relationship Name | Origin Entity | Target Entity | Column Mapping |
 | :--- | :--- | :--- | :--- |
@@ -49,25 +69,25 @@ Configure the matching key columns for each relationship line on the canvas:
 | `monitors` | `VitalSignEquipment` | `Patient` | `PatientId` = `PatientId` |
 | `locatedIn` | `VitalSignEquipment` | `Room` | `RoomId` = `RoomId` |
 
-1. On the canvas, select the `contains` relationship line between `Hospital` and `Department`.
-2. Configure origin and target entity key mappings (`HospitalId` → `HospitalId`). Select **Save**.
-3. Repeat key binding for `has`, `assignedTo`, `monitors`, and `locatedIn` relationships.
+1. Click the `contains` relationship line on the canvas.
+2. Select `HospitalId` on Hospital and `DepartmentId` on Department. Select **Save**.
+3. Repeat for remaining four relationships.
 
 ---
 
 ## Validation
 
-1. Verify that bound status icons appear next to all 5 entities in the Explorer pane.
-2. Confirm that all 5 relationship lines show configured mapping indicators.
+1. Confirm all 5 entity types display bound status icons.
+2. Confirm all 5 relationship lines display configured mapping indicators.
 
 ---
 
 ## Expected Result
 
-All entities and relationships are bound to physical Delta tables in `LamnaHealthcareLH`.
+All entities and relationships in `LamnaHealthcareOntology` are bound to physical data tables.
 
 ---
 
 ## Next Exercise
 
-Proceed to [Exercise 08: Test Ontology](08-Test-Ontology.md).
+Proceed to [Exercise 08: Preview the Ontology](08-Test-Ontology.md).

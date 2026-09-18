@@ -1,4 +1,4 @@
-# Exercise 03: Load Healthcare Data
+# Exercise 03: Create an Eventhouse with Streaming Data
 
 [← Previous Exercise: Create Lakehouse](02-Create-Lakehouse.md) | [Home](../README.md) | [Next Exercise: Create Ontology →](04-Create-Ontology.md)
 
@@ -6,68 +6,37 @@
 
 ## Objective
 
-Upload the sample healthcare CSV datasets into the `LamnaHealthcareLH` lakehouse and convert them into Delta Lake tables for ontology binding.
+Create an Eventhouse named `LamnaHealthcareEH` and ingest real-time vital sign measurements from `VitalSignsReadings.csv` into a KQL database table for time-series ontology binding.
 
 ---
 
 ## Steps
 
-### Step 1: Upload CSV Files to Lakehouse
-1. Open the `LamnaHealthcareLH` lakehouse in the Fabric portal.
-2. In the left **Explorer** pane, select **Get data > Upload files** (or click the ellipsis `...` next to **Files** and select **Upload > Upload files**).
-3. Browse to and select these five files from your local `Data/` folder:
-   - `hospitals.csv`
-   - `departments.csv`
-   - `rooms.csv`
-   - `patients.csv`
-   - `vitalsignequipment.csv`
+### Step 1: Create Eventhouse Item
+1. In your `LamnaHealthcareWS` workspace, select **+ New item > Eventhouse**.
+2. Name the eventhouse `LamnaHealthcareEH` and select **Create**.
+3. A default KQL database is created with the same name (`LamnaHealthcareEH`). Select the KQL database to open it.
 
-> [!NOTE]
-> `vitalsignsreadings.csv` contains real-time time-series measurements (heart rate, oxygen saturation). In advanced scenarios, time-series data is ingested into an Eventhouse table rather than static lakehouse tables.
-
-![KQL Database VitalSignsReadings Data Preview](../Images/timesseries.png)
-
-4. Select **Upload** to upload all five files.
-
-![Uploaded CSV Files in Lakehouse](../Images/03-upload-csv.png)
-
-### Step 2: Convert CSV Files to Tables
-Convert each uploaded file into a Lakehouse table:
-
-1. In Explorer under **Files**, select the ellipsis (`...`) next to `hospitals.csv`.
-2. Select **Load to Tables > New table**.
-3. Configure the table settings:
-   - **Table name**: `hospitals`
-   - **Column header**: Check **Use header for column names**
-   - **Separator**: Comma (`,`)
-4. Select **Load**.
-5. Repeat this exact process for the remaining four files:
-
-| File Name | Target Table Name | Column Header | Separator |
-| :--- | :--- | :--- | :--- |
-| `departments.csv` | `departments` | Checked | Comma (`,`) |
-| `rooms.csv` | `rooms` | Checked | Comma (`,`) |
-| `patients.csv` | `patients` | Checked | Comma (`,`) |
-| `vitalsignequipment.csv` | `vitalsignequipment` | Checked | Comma (`,`) |
+### Step 2: Ingest Vital Signs Readings Data
+1. In the KQL database, select **Get data > Local file**.
+2. In the **Select or create a destination table** section, select **+ New table** and enter `VitalSignsReadings` as the table name.
+3. Under **Add up to 1,000 files**, select **Browse for files** and upload the `VitalSignsReadings.csv` file.
+4. Select **Next**, then continue through the ingestion wizard, keeping the default settings.
+5. Select **Finish** to complete the ingestion.
 
 ---
 
 ## Validation
 
-1. Expand the **Tables** folder in the Explorer pane.
-2. Verify you have five tables listed in lowercase:
-   - `hospitals`
-   - `departments`
-   - `rooms`
-   - `patients`
-   - `vitalsignequipment`
-3. Select the `patients` table to preview data. Confirm patient record `1001` (`Kerry Allen`) is visible.
+Verify that the `VitalSignsReadings` table appears in your KQL database as shown in the image below:
+
+![VitalSignsReadings Table Ingested in KQL Database](../Images/timesseries.png)
 
 ---
 
 ## Expected Result
 
-All five CSV files are converted into Delta Lake tables residing in `LamnaHealthcareLH`.
+The `VitalSignsReadings` table containing 20 time-series rows is active in the `LamnaHealthcareEH` KQL database.
 
 ---
 
