@@ -6,7 +6,7 @@
 
 ## Objective
 
-Validate `LamnaHealthcareOntology` schemas, inspect graph connections via the Relationship Graph, and run graph queries using the Fabric IQ Query Builder focused on `PatientId 1001`.
+Validate `LamnaHealthcareOntology` schemas, inspect graph connections via the Relationship Graph, run traversal queries in the Fabric IQ Query Builder focused on `PatientId 1001`, and inspect properties using Card View.
 
 ---
 
@@ -24,44 +24,146 @@ Validate `LamnaHealthcareOntology` schemas, inspect graph connections via the Re
 
 ![Entity Type Overview and Relationship Graph](../Images/relationship-graph.png)
 
-### Step 2: Test Entity Graph Traversal
-1. Select instance `PatientId 1001` (`Kerry Allen`).
-2. Observe the interactive **Relationship Graph** view for Patient 1001:
-   - Traverses to `Room 1` (`ICU-301`) via `assignedTo`.
-   - Traverses to `VitalSignEquipment VS-1001` via `monitors`.
+---
 
-### Step 3: Run Traversal Queries in Query Builder
-1. Select **Query Builder** in the ribbon.
-2. Construct a graph traversal query for `PatientId 1001`:
+### Step 2: Test Entity Graph Traversal
+1. Open the **Patient** entity type.
+2. Select the instance `PatientId 1001` (`Kerry Allen`).
+3. Open the **Relationship Graph**.
+4. Select **Expand** to expand the relationships connected to Patient 1001.
+
+You should see the related entities and relationships in the graph canvas:
 
 ```text
-FIND Patient WHERE PatientId = 1001
-  MATCH (Patient)-[assignedTo]->(Room)
-  MATCH (VitalSignEquipment)-[monitors]->(Patient)
-  MATCH (Department)-[has]->(Room)
+VitalSignEquipment
+        │
+     monitors
+        │
+        ▼
+     Patient
+        │
+    assignedTo
+        │
+        ▼
+      Room
 ```
 
-3. Select **Run Query**.
+For `PatientId 1001`, the graph should resolve relationships to:
+- **Patient**: Kerry Allen (`1001`)
+- **Room**: Room 1 / `ICU-301`
+- **VitalSignEquipment**: `VS-1001`
+
+> [!NOTE]
+> **Why this matters:** The Relationship Graph provides a visual way to verify that the ontology understands the connections between entities rather than treating each table as isolated data.
 
 ---
 
-## Validation
+### Step 3: Test the Ontology Using Query Builder
 
-Review the Query Builder output table for `PatientId 1001`:
+After expanding the graph:
+1. Select **Query Builder** from the top ribbon.
+2. Select **Add filter**.
+3. Configure the filter details:
 
-| Field | Returned Value |
+| Setting | Value |
+| :--- | :--- |
+| **Entity** | `Patient` |
+| **Property** | `PatientId` |
+| **Condition** | `Equals` |
+| **Value** | `1001` |
+
+4. Select **Run query**.
+
+The query returns the graph associated with `PatientId 1001`:
+
+```text
+                 ┌──────────────────────┐
+                 │ VitalSignEquipment   │
+                 │ VS-1001              │
+                 └──────────┬───────────┘
+                            │
+                         monitors
+                            │
+                            ▼
+                    ┌──────────────┐
+                    │   Patient    │
+                    │ Kerry Allen  │
+                    │ ID: 1001     │
+                    └──────┬───────┘
+                           │
+                       assignedTo
+                           │
+                           ▼
+                    ┌──────────────┐
+                    │     Room     │
+                    │ Room ID: 1   │
+                    │ ICU-301      │
+                    └──────────────┘
+```
+
+---
+
+### Step 4: Switch to Card View
+
+After running the query:
+1. Open **Diagram view** from the view selector.
+2. Select **Card view**.
+
+The result is displayed as cards containing detailed entity information. This makes it easy to inspect actual properties of returned entities rather than only viewing relationship lines.
+
+For example, the **Patient** card displays:
+```text
+Patient
+--------------------
+PatientId: 1001
+FirstName: Kerry
+LastName: Allen
+DateOfBirth: 1965-03-15
+AdmissionDate: 2026-01-28
+CurrentRoomId: 1
+```
+
+The related **VitalSignEquipment** card displays:
+```text
+VitalSignEquipment
+--------------------
+EquipmentId: VS-1001
+PatientId: 1001
+EquipmentType: Continuous Monitoring
+RoomId: 1
+```
+
+The related **Room** card displays:
+```text
+Room
+--------------------
+RoomId: 1
+RoomNumber: ICU-301
+Type: Critical Care
+```
+
+---
+
+### Step 5: Validate the Ontology
+
+Verify that the query correctly resolves the following information:
+
+| Entity / Property | Expected Value |
 | :--- | :--- |
 | **PatientId** | `1001` |
-| **Patient Name** | Kerry Allen |
-| **Assigned Room** | `1` (RoomNumber: `ICU-301`, Type: `Critical Care`) |
-| **Department** | `1` (Intensive Care Unit, Floor 3) |
-| **Monitoring Equipment** | `VS-1001` (Continuous Monitoring) |
+| **Patient** | Kerry Allen |
+| **Assigned Room** | `1` / `ICU-301` |
+| **Monitoring Equipment** | `VS-1001` |
+| **Equipment Type** | Continuous Monitoring |
+
+> [!IMPORTANT]
+> The key advantage is that information is retrieved dynamically through ontology entities and semantic graph relationships, without needing manual SQL joins across underlying Lakehouse tables.
 
 ---
 
 ## Expected Result
 
-`PatientId 1001` correctly resolves across all graph relationship hops (`Patient` → `Room` → `Equipment` → `Department`).
+`PatientId 1001` correctly resolves across all graph relationship hops (`Patient` → `Room` → `Equipment` → `Department`), returning validated entity properties in both Diagram and Card views.
 
 ---
 
